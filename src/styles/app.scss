@@ -1,0 +1,237 @@
+@use "./destyle";
+@use "./_utils";
+@use "./_common";
+@use "./variables" as vrs;
+@use "./mixins" as mx;
+
+body {
+    font-size: 16px;
+    color: vrs.$fontColor1;
+    letter-spacing: 0.1rem;
+    overflow-x: hidden;
+    main {
+        position: relative;
+        padding-bottom: vrs.$footerHeight;
+    }
+    header {
+        @include mx.shadow();
+        position: fixed;
+        top: 0;
+        z-index: 100;
+        width: 100%;
+
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        height: vrs.$headerHeight;
+        padding: 10px 10px;
+        background-color: white;
+
+        .left {
+            @include mx.center();
+            cursor: pointer;
+            h1 {
+                font-size: 1.1rem;
+                margin-left: 3px;
+            }
+            img {
+                width: 70px;
+            }
+        }
+        .right {
+            display: none;
+            ul {
+                @include mx.center();
+                li {
+                    font-size: 1.05rem;
+                    margin-left: 10px;
+                }
+            }
+        }
+    }
+    .sections {
+        padding-bottom: 10px;
+        section {
+            .content {
+                @include mx.center();
+                flex-flow: column;
+                height: 100%;
+                max-width: 1000px;
+                margin: 0 auto;
+                // border: 2px solid rgba(46, 63, 216, 0.082);
+                .title {
+                    color: vrs.$color3;
+                }
+                .subTitle {
+                    text-align: center;
+                }
+            }
+        }
+    }
+    #KeyVisual {
+        margin-top: vrs.$headerHeight;
+        background-image: url("/images/keyVisual.png");
+        background-size: cover;
+        background-repeat: no-repeat;
+        background-position: left;
+        width: 100%;
+        height: 190px;
+    }
+    #Trouble {
+        padding: 40px 10px 10px 10px;
+        .titles {
+            .title {
+                text-align: center;
+                font-size: 1.3rem;
+            }
+        }
+        .texts {
+            margin-top: 20px;
+            line-height: 1.5;
+        }
+        .exImg{
+            margin: 0 auto;
+            margin-top: 10px;
+            height: 200px;
+            width: 280px;
+        }
+    }
+    #About {
+        .About_child {
+            padding: 32px 16px 0px 16px;
+            line-height: 1.75;
+            border: 3px solid #eeeeee;
+            border-radius: 16px;
+            margin-top: 10px;
+            .title {
+                font-size: 1.1rem;
+                font-weight: 600;
+                text-align: center;
+            }
+            .texts {
+                margin-top: 32px;
+                font-size: 1rem;
+            }
+            .img {
+                @include mx.center();
+                height: 170px;
+                img {
+                    height: 100%;
+                }
+            }
+        }
+    }
+    #Apps {
+        .appsSwiper {
+            margin-top: 10px !important;
+            padding: 32px 0 16px 0;
+            border: 3px solid #eeeeee;
+            border-radius: 16px;
+            .title {
+                text-align: center;
+            }
+            .subTitle {
+                text-align: center;
+                font-size: 1.3rem;
+                line-height: 1.3rem;
+                .chonPink {
+                    font-size: 2rem !important;
+                }
+            }
+            .swiper {
+                .swiper-slide {
+                    height: fit-content !important;
+                    .icon_title {
+                        display: flex;
+                        flex-flow: column;
+                        align-items: center;
+                        margin-top: 20px;
+                        .appIcon {
+                            $size: 85px;
+                            img {
+                                width: $size !important;
+                                aspect-ratio: 1/1 !important;
+                            }
+                        }
+                        .appName {
+                            margin-top: 10px;
+                            text-align: center;
+                            font-size: 0.8rem;
+                            font-weight: 600;
+                        }
+                    }
+                }
+            }
+        }
+    }
+
+    footer {
+        .inner {
+            position: relative;
+            @include mx.center();
+            flex-flow: column;
+            justify-content: center;
+            height: 47px;
+            background-color: #eeeeee;
+            font-size: 0.7rem;
+            ul {
+                display: flex;
+                li {
+                    margin-right: 5px;
+                    font-weight: 600;
+                    &:last-of-type {
+                        margin: 0;
+                    }
+                }
+            }
+            .copyLight {
+                margin-top: 5px;
+                letter-spacing: 0.02rem;
+            }
+        }
+    }
+
+    .FootLineAt {
+        @include mx.center();
+        position: fixed;
+        bottom: 0;
+        z-index: 100;
+
+        width: 100%;
+        height: vrs.$footerHeight;
+        border-top: 1px solid rgb(156, 156, 156);
+        background-color: white;
+        .lineAt {
+            transform: scale(0.9);
+            margin: 20px 0;
+        }
+    }
+}
+
+#moveTop {
+    position: fixed;
+    bottom: 85px;
+    right: 10px;
+    z-index: 999;
+    transform: translate(0%, -50%) rotate(270deg);
+    font-weight: 700;
+    font-size: 0.9rem;
+    border: 1px solid black;
+    border-radius: 2000px;
+    padding: 4px 5px 5px 5px;
+    background-color: white;
+    cursor: pointer;
+    transition: transform 0.2s ease, opacity 0.2s ease, visibility 0.2s ease, bottom 0.3s ease;
+    user-select: none;
+    &:active {
+        background-color: #afafaf;
+        transform: translate(0%, -50%) rotate(270deg) scale(0.9);
+    }
+    &.hidden {
+        visibility: hidden;
+        opacity: 0;
+    }
+    &.isBottom {
+        bottom: 130px;
+    }
+}

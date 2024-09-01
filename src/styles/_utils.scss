@@ -1,0 +1,45 @@
+@use "./variables" as vrs;
+.inner {
+    padding: 0 10px;
+}
+.font_blue {
+    color: vrs.$color4;
+}
+.font_pink {
+    color: vrs.$color2;
+}
+
+.font_green {
+    color: rgb(19, 202, 19);
+}
+
+.exImg {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    border: 1px solid black;
+}
+
+.chonPink {
+    position: relative;
+    &::after {
+        $size: 18px;
+        position: absolute;
+        top: 0px;
+        left: -12px;
+        content: "";
+        display: block;
+        width: $size;
+        height: $size;
+        background-image: url("../assets/chonPink.webp");
+        background-repeat: no-repeat;
+        background-size: contain;
+    }
+}
+
+@media (min-width: 540px) and (max-width: 840px) {
+}
+
+@media (max-width: 539px) {
+}
