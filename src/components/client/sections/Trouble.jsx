@@ -13,9 +13,9 @@ function Trouble() {
                     </p>
                 </div>
                 <div className="texts">
-                    <span className="bg-red TroubleHighlight">話すのが好き</span>
-                    <span className="bg-yellow TroubleHighlight">歌うのが好き</span>
-                    <span className="bg-green TroubleHighlight">趣味を活かしたい</span>
+                    <span className="bg-cyan TroubleHighlight">話すのが好き</span>
+                    <span className="bg-lightGreen TroubleHighlight">歌うのが好き</span>
+                    <span className="bg-yellow TroubleHighlight">趣味を活かしたい</span>
                     <br />
                     そんなあなたの「好き」を応援します。
                     <br />

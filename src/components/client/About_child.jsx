@@ -12,8 +12,14 @@ function About_child(props) {
                     </React.Fragment>
                 ))}
             </p>
-            <p className="texts">{props.children}</p>
-            <div className="img">{img ? <img src={img} alt="" /> : {}}</div>
+            <div className="texts">{props.children}</div>
+            {img ? (
+                <div className="img">
+                    <img src={img} alt="" />
+                </div>
+            ) : (
+                ""
+            )}
         </div>
     );
 }

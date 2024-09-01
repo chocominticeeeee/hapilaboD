@@ -20,17 +20,20 @@ function About() {
                     <br />
                     スキマ時間でOK！初心者の方も安心のサポート体制です。
                 </About_child>
-                <About_child title="ライブ配信ってどうやるの？" img={IMG_QUESTION.src}>
-                    「やってみたいけど、難しそう…」
+                <About_child title="ライブ配信ってどうやるの？">
+                    <p className="center">「やってみたいけど、難しそう…」</p>
                     <br />
+                    <div className="img">
+                        <img src={IMG_QUESTION.src} alt="" />
+                    </div>
                     <br />
                     そんな不安をお持ちのあなたも大丈夫！ <br />
                     <br />
                     当事務所では、配信のスタート方法から、トークのコツ、視聴者との交流まで、しっかりとサポートいたします。
                     <br />
                     <br />
-                    <ul className="how2support">
-                        <span className="subTitle" data-icon="✨">
+                    <div className="how2support">
+                        <span className="subTitle bg-cyan TroubleHighlight" data-icon="✨">
                             配信デビューをスムーズにサポート！
                         </span>
                         <ul>
@@ -38,7 +41,7 @@ function About() {
                             <li>配信の基礎知識や、魅力的な配信方法をレクチャーします。</li>
                             <li>トークのコツや、視聴者と楽しく交流する方法を伝授します。</li>
                         </ul>
-                        <span className="subTitle" data-icon="⏰">
+                        <span className="subTitle bg-lightGreen TroubleHighlight" data-icon="⏰">
                             子育てや家事の合間に <br />
                             無理なく始められます！
                         </span>
@@ -47,7 +50,7 @@ function About() {
                             <li>配信スケジュールは、あなたに合わせて柔軟に調整できます。</li>
                             <li>無理なく続けられるよう、専属マネージャーがサポートします。</li>
                         </ul>
-                        <span className="subTitle" data-icon="🤝">
+                        <span className="subTitle bg-yellow TroubleHighlight" data-icon="🤝">
                             わからないことや不安なことがあれば <br />
                             いつでも相談してください！
                         </span>
@@ -55,9 +58,9 @@ function About() {
                             <li>配信に関する疑問や不安は、いつでもお気軽にご相談ください。</li>
                             <li>経験豊富なスタッフが、親身になってサポートいたします。</li>
                         </ul>
-                    </ul>
+                    </div>
                 </About_child>
-                <About_child title="「一人じゃない」安心感！\nアットホームなコミュニティ" img={IMG_HAPPY.src}>
+                <About_child title="「１人じゃない」安心感！" img={IMG_HAPPY.src}>
                     同世代の女性ライバーが多く、気軽に相談したり、情報交換ができる環境です。
                     <br />
                     コラボ配信で、さらに活動の幅を広げましょう！

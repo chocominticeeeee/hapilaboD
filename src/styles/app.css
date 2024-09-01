@@ -390,16 +390,31 @@ th {
   color: rgb(19, 202, 19);
 }
 
-.bg-red {
+.center {
+  text-align: center;
+}
+
+.bg-cyan {
   background-color: #a0e7e5;
 }
 
-.bg-yellow {
+.bg-lightGreen {
   background-color: #b4f8c8;
 }
 
-.bg-green {
+.bg-yellow {
   background-color: #ffd803;
+}
+
+.TroubleHighlight {
+  display: block;
+  width: -moz-fit-content;
+  width: fit-content;
+  padding: 3px 6px;
+  font-weight: 600;
+}
+.TroubleHighlight:not(:first-of-type) {
+  margin-top: 5px;
 }
 
 .bold {
@@ -668,16 +683,6 @@ body #Trouble .texts {
   line-height: 1.5;
   text-align: center;
 }
-body #Trouble .texts .TroubleHighlight {
-  display: block;
-  width: -moz-fit-content;
-  width: fit-content;
-  padding: 3px 6px;
-  font-weight: 600;
-}
-body #Trouble .texts .TroubleHighlight:not(:first-of-type) {
-  margin-top: 5px;
-}
 body #Trouble .exImg {
   margin: 0 auto;
   margin-top: 10px;
@@ -733,7 +738,11 @@ body #About .About_child .how2support .subTitle {
 body #About .About_child .how2support .subTitle:not(:first-of-type) {
   margin-top: 25px;
 }
+body #About .About_child .how2support .subTitle:last-of-type {
+  margin-bottom: 25px;
+}
 body #About .About_child .how2support .subTitle::before {
+  display: none;
   position: absolute;
   top: 50%;
   left: 0;
@@ -741,6 +750,7 @@ body #About .About_child .how2support .subTitle::before {
   content: attr(data-icon);
 }
 body #About .About_child .how2support .subTitle::after {
+  display: none;
   position: absolute;
   top: 50%;
   right: 0;
@@ -862,9 +872,10 @@ body footer .inner ul {
 body footer .inner ul li {
   margin-right: 5px;
   font-weight: 600;
+  letter-spacing: 0.018rem;
 }
-body footer .inner ul li:last-of-type {
-  margin: 0;
+body footer .inner ul li:not(:last-of-type) {
+  margin-right: 8px;
 }
 body footer .inner .copyLight {
   margin-top: 5px;

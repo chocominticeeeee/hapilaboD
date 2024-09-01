@@ -12,19 +12,30 @@
 .font_green {
     color: rgb(19, 202, 19);
 }
+.center {
+    text-align: center;
+}
 
-
-
-.bg-red {
+.bg-cyan {
     background-color: #a0e7e5;
 }
 
-.bg-yellow {
+.bg-lightGreen {
     background-color: #b4f8c8;
 }
 
-.bg-green {
+.bg-yellow {
     background-color: #ffd803;
+}
+
+.TroubleHighlight {
+    display: block;
+    width: fit-content;
+    padding: 3px 6px;
+    font-weight: 600;
+    &:not(:first-of-type) {
+        margin-top: 5px;
+    }
 }
 
 .bold {

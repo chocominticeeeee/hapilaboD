@@ -94,15 +94,7 @@ body {
             margin-top: 20px;
             line-height: 1.5;
             text-align: center;
-            .TroubleHighlight {
-                display: block;
-                width: fit-content;
-                padding: 3px 6px;
-                font-weight: 600;
-                &:not(:first-of-type) {
-                    margin-top: 5px;
-                }
-            }
+            
         }
         .exImg {
             margin: 0 auto;
@@ -148,7 +140,7 @@ body {
                     align-items: center;
                     text-align: center;
                     font-weight: 600;
-                    width:  fit-content;
+                    width: fit-content;
                     padding: 0 22px;
                     margin: 0 auto;
                     font-size: 0.95rem;
@@ -156,7 +148,12 @@ body {
                     &:not(:first-of-type) {
                         margin-top: 25px;
                     }
+                    &:last-of-type{
+                        margin-bottom: 25px;
+                    }
                     &::before {
+                        display: none;
+
                         position: absolute;
                         top: 50%;
                         left: 0;
@@ -164,6 +161,8 @@ body {
                         content: attr(data-icon);
                     }
                     &::after {
+                        display: none;
+
                         position: absolute;
                         top: 50%;
                         right: 0;
@@ -300,8 +299,9 @@ body {
                 li {
                     margin-right: 5px;
                     font-weight: 600;
-                    &:last-of-type {
-                        margin: 0;
+                    letter-spacing: 0.018rem;
+                    &:not(:last-of-type) {
+                        margin-right: 8px;
                     }
                 }
             }
