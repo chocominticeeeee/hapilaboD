@@ -789,6 +789,7 @@ body #Flow .inner .content ul li .title::before {
   aspect-ratio: 1/1;
   content: attr(data-index);
   background-color: white;
+  color: rgb(0, 209, 0);
   border-radius: 6px;
 }
 body #Flow .inner .content ul li .details {
@@ -798,6 +799,7 @@ body #Flow .inner .content ul li .details {
 }
 body #Flow .inner .content ul li:last-of-type .details {
   border-left: 2px solid transparent;
+  margin-left: 0px;
 }
 body footer .inner {
   position: relative;
@@ -824,21 +826,71 @@ body footer .inner .copyLight {
   margin-top: 5px;
   letter-spacing: 0.02rem;
 }
-body .FootLineAt {
+body #FootLineAt {
   display: flex;
   justify-content: center;
   align-items: center;
   position: fixed;
   bottom: 0;
   z-index: 100;
+  display: flex;
+  flex-flow: column;
+  justify-content: center;
+  align-items: center;
   width: 100%;
   height: 90px;
   border-top: 1px solid rgb(156, 156, 156);
   background-color: white;
 }
-body .FootLineAt .lineAt {
-  transform: scale(0.9);
-  margin: 20px 0;
+body #FootLineAt .onlyNow {
+  font-size: 0.9rem;
+}
+body #FootLineAt .onlyNow .line1 {
+  display: flex;
+  align-items: center;
+}
+body #FootLineAt .onlyNow .line1::before {
+  display: inline-block;
+  content: "";
+  text-align: start;
+  background-image: url("../assets/present.webp");
+  background-size: 50px;
+  background-position: center;
+  height: 25px;
+  aspect-ratio: 1/1;
+}
+body #FootLineAt a {
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: #06c755;
+  padding: 4px 34px 4px 8px;
+  margin-top: 2px;
+  font-weight: 600;
+  font-size: 0.8rem;
+  border-radius: 100px;
+  color: white;
+}
+body #FootLineAt a::before {
+  display: inline-block;
+  content: "";
+  background-image: url("../assets/linelogo.webp");
+  background-size: cover;
+  height: 25px;
+  aspect-ratio: 1/1;
+  margin-right: 4px;
+}
+body #FootLineAt a:after {
+  position: absolute;
+  top: 44%;
+  right: 12px;
+  transform: translateY(-50%);
+  content: ">";
+}
+body #FootLineAt .attension {
+  font-size: 0.6rem;
+  margin-top: 2px;
 }
 
 #moveTop {
