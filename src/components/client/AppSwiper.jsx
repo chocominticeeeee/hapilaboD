@@ -6,6 +6,19 @@ import "swiper/css";
 import AppIcons from "../../assets/appIcons/AppIcons";
 
 function AppSwiper() {
+    let swiperInstance = null;
+    const handleTouchStart = () => {
+        console.log("start");
+    };
+
+    const handleTouchEnd = () => {
+        console.log("end");
+    };
+
+    const handleSwiperInit = (swiper) => {
+        swiperInstance = swiper;
+    };
+
     return (
         <div className="appsSwiper">
             <p className="subTitle">
@@ -16,11 +29,14 @@ function AppSwiper() {
             <Swiper
                 modules={[Autoplay]}
                 loop={true}
-                allowTouchMove={false}
+                allowTouchMove={true}
                 spaceBetween={20}
                 slidesPerView={6}
                 autoplay={{ delay: 500 }}
                 speed={5000}
+                onSwiper={handleSwiperInit}
+                onTouchStart={handleTouchStart}
+                onTouchEnd={handleTouchEnd}
                 breakpoints={{
                     100: {
                         slidesPerView: 4,

@@ -18,7 +18,7 @@ function Header() {
         <header>
             <div className="left" ref={ref}>
                 <img src={LOGO.src} alt="ライバー事務所はぴラボ" />
-                <h1>ライバー事務所はぴラボ</h1>
+                {/* <h1>ライバー事務所はぴラボ</h1> */}
             </div>
             <div className="right">
                 <nav>
