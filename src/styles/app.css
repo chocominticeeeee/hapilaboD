@@ -390,12 +390,27 @@ th {
   color: rgb(19, 202, 19);
 }
 
+.bg-red {
+  background-color: #a0e7e5;
+}
+
+.bg-yellow {
+  background-color: #b4f8c8;
+}
+
+.bg-green {
+  background-color: #ffd803;
+}
+
+.bold {
+  font-weight: 600;
+}
+
 .exImg {
   display: flex;
   align-items: center;
   justify-content: center;
   width: 100%;
-  border: 1px solid black;
 }
 
 .chonPink {
@@ -563,7 +578,7 @@ th {
 }
 body {
   font-size: 16px;
-  color: rgb(2, 2, 22);
+  color: rgb(0, 0, 0);
   letter-spacing: 0.1rem;
   overflow-x: hidden;
 }
@@ -623,14 +638,14 @@ body .sections section .content {
   margin: 0 auto;
 }
 body .sections section .content .title {
-  color: #3b5d8f;
+  color: rgb(0, 0, 0);
 }
 body .sections section .content .subTitle {
   text-align: center;
 }
 body #KeyVisual {
   margin-top: 60px;
-  background-image: url("/images/keyVisual.png");
+  background-image: url("/images/keyVisual2.png");
   background-size: cover;
   background-repeat: no-repeat;
   background-position: left;
@@ -643,16 +658,34 @@ body #Trouble {
 body #Trouble .titles .title {
   text-align: center;
   font-size: 1.3rem;
+  font-weight: 700;
 }
 body #Trouble .texts {
+  display: flex;
+  flex-flow: column;
+  align-items: center;
   margin-top: 20px;
   line-height: 1.5;
+  text-align: center;
+}
+body #Trouble .texts .TroubleHighlight {
+  display: block;
+  width: -moz-fit-content;
+  width: fit-content;
+  padding: 3px 6px;
+  font-weight: 600;
+}
+body #Trouble .texts .TroubleHighlight:not(:first-of-type) {
+  margin-top: 5px;
 }
 body #Trouble .exImg {
   margin: 0 auto;
   margin-top: 10px;
-  height: 200px;
-  width: 280px;
+  height: 250px;
+  width: 100%;
+  background-image: url("/images/troubleImg.jpg");
+  background-size: cover;
+  background-repeat: no-repeat;
 }
 body #About .About_child {
   padding: 32px 16px 0px 16px;
@@ -667,7 +700,7 @@ body #About .About_child .title {
   text-align: center;
 }
 body #About .About_child .texts {
-  margin-top: 32px;
+  margin-top: 20px;
   font-size: 1rem;
 }
 body #About .About_child .img {
@@ -696,6 +729,9 @@ body #Apps .appsSwiper .subTitle {
 body #Apps .appsSwiper .subTitle .chonPink {
   font-size: 2rem !important;
 }
+body #Apps .appsSwiper .swiper {
+  margin-top: 10px;
+}
 body #Apps .appsSwiper .swiper .swiper-slide {
   height: -moz-fit-content !important;
   height: fit-content !important;
@@ -715,6 +751,53 @@ body #Apps .appsSwiper .swiper .swiper-slide .icon_title .appName {
   text-align: center;
   font-size: 0.8rem;
   font-weight: 600;
+}
+body #Flow {
+  margin-top: 10px;
+}
+body #Flow .inner .content {
+  padding: 32px 16px 0;
+  border-radius: 16px;
+  border: 3px solid #eeeeee;
+}
+body #Flow .inner .content .flowTitle {
+  text-align: center;
+  font-size: 1.3rem;
+  font-weight: 600;
+}
+body #Flow .inner .content ul {
+  margin-top: 30px;
+}
+body #Flow .inner .content ul li .title {
+  position: relative;
+  background-color: #ffe110;
+  padding: 6px;
+  font-weight: 600;
+  font-size: 1.1rem;
+  text-align: center;
+  border-radius: 6px;
+}
+body #Flow .inner .content ul li .title::before {
+  position: absolute;
+  top: 50%;
+  left: 4px;
+  transform: translateY(-50%);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 25px;
+  aspect-ratio: 1/1;
+  content: attr(data-index);
+  background-color: white;
+  border-radius: 6px;
+}
+body #Flow .inner .content ul li .details {
+  padding: 18px 18px 30px 12px;
+  margin-left: 15px;
+  border-left: 2px solid black;
+}
+body #Flow .inner .content ul li:last-of-type .details {
+  border-left: 2px solid transparent;
 }
 body footer .inner {
   position: relative;

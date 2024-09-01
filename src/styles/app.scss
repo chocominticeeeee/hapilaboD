@@ -60,7 +60,7 @@ body {
                 margin: 0 auto;
                 // border: 2px solid rgba(46, 63, 216, 0.082);
                 .title {
-                    color: vrs.$color3;
+                    color: vrs.$fontColor1;
                 }
                 .subTitle {
                     text-align: center;
@@ -70,7 +70,7 @@ body {
     }
     #KeyVisual {
         margin-top: vrs.$headerHeight;
-        background-image: url("/images/keyVisual.png");
+        background-image: url("/images/keyVisual2.png");
         background-size: cover;
         background-repeat: no-repeat;
         background-position: left;
@@ -79,21 +79,39 @@ body {
     }
     #Trouble {
         padding: 40px 10px 10px 10px;
+        // background-color: #bae8e8;
         .titles {
             .title {
                 text-align: center;
                 font-size: 1.3rem;
+                font-weight: 700;
             }
         }
         .texts {
+            display: flex;
+            flex-flow: column;
+            align-items: center;
             margin-top: 20px;
             line-height: 1.5;
+            text-align: center;
+            .TroubleHighlight {
+                display: block;
+                width: fit-content;
+                padding: 3px 6px;
+                font-weight: 600;
+                &:not(:first-of-type) {
+                    margin-top: 5px;
+                }
+            }
         }
-        .exImg{
+        .exImg {
             margin: 0 auto;
             margin-top: 10px;
-            height: 200px;
-            width: 280px;
+            height: 250px;
+            width: 100%;
+            background-image: url("/images/troubleImg.jpg");
+            background-size: cover;
+            background-repeat: no-repeat;
         }
     }
     #About {
@@ -109,7 +127,7 @@ body {
                 text-align: center;
             }
             .texts {
-                margin-top: 32px;
+                margin-top: 20px;
                 font-size: 1rem;
             }
             .img {
@@ -139,6 +157,7 @@ body {
                 }
             }
             .swiper {
+                margin-top: 10px;
                 .swiper-slide {
                     height: fit-content !important;
                     .icon_title {
@@ -158,6 +177,61 @@ body {
                             text-align: center;
                             font-size: 0.8rem;
                             font-weight: 600;
+                        }
+                    }
+                }
+            }
+        }
+    }
+
+    #Flow {
+        margin-top: 10px;
+        .inner {
+            .content {
+                padding: 32px 16px 0;
+                border-radius: 16px;
+                border: 3px solid #eeeeee;
+                .flowTitle {
+                    text-align: center;
+                    font-size: 1.3rem;
+                    font-weight: 600;
+                }
+                ul {
+                    margin-top: 30px;
+                    li {
+                        .title {
+                            position: relative;
+                            background-color: #ffe110;
+                            padding: 6px;
+                            font-weight: 600;
+                            font-size: 1.1rem;
+                            text-align: center;
+                            &::before {
+                                position: absolute;
+                                top: 50%;
+                                left: 4px;
+                                transform: translateY(-50%);
+
+                                display: flex;
+                                align-items: center;
+                                justify-content: center;
+                                width: 25px;
+                                aspect-ratio: 1/1;
+                                content: attr(data-index);
+                                background-color: white;
+                                border-radius: 6px;
+                            }
+                            border-radius: 6px;
+                        }
+                        .details {
+                            padding: 18px 18px 30px 12px;
+                            margin-left: 15px;
+                            border-left: 2px solid black;
+                        }
+                        &:last-of-type {
+                            .details {
+                                border-left: 2px solid transparent;
+                            }
                         }
                     }
                 }

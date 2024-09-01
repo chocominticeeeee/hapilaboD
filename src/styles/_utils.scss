@@ -13,12 +13,30 @@
     color: rgb(19, 202, 19);
 }
 
+
+
+.bg-red {
+    background-color: #a0e7e5;
+}
+
+.bg-yellow {
+    background-color: #b4f8c8;
+}
+
+.bg-green {
+    background-color: #ffd803;
+}
+
+.bold {
+    font-weight: 600;
+}
+
 .exImg {
     display: flex;
     align-items: center;
     justify-content: center;
     width: 100%;
-    border: 1px solid black;
+    // border: 1px solid black;
 }
 
 .chonPink {
