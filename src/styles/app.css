@@ -702,6 +702,7 @@ body #About .About_child .title {
 body #About .About_child .texts {
   margin-top: 20px;
   font-size: 1rem;
+  letter-spacing: 0.04rem;
 }
 body #About .About_child .img {
   display: flex;
@@ -711,6 +712,49 @@ body #About .About_child .img {
 }
 body #About .About_child .img img {
   height: 100%;
+}
+body #About .About_child .how2support {
+  line-height: 1.2;
+}
+body #About .About_child .how2support .subTitle {
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  font-weight: 600;
+  width: -moz-fit-content;
+  width: fit-content;
+  padding: 0 22px;
+  margin: 0 auto;
+  font-size: 0.95rem;
+  letter-spacing: 0.04rem;
+}
+body #About .About_child .how2support .subTitle:not(:first-of-type) {
+  margin-top: 25px;
+}
+body #About .About_child .how2support .subTitle::before {
+  position: absolute;
+  top: 50%;
+  left: 0;
+  transform: translateY(-50%);
+  content: attr(data-icon);
+}
+body #About .About_child .how2support .subTitle::after {
+  position: absolute;
+  top: 50%;
+  right: 0;
+  transform: translateY(-50%);
+  content: attr(data-icon);
+}
+body #About .About_child .how2support ul {
+  display: none;
+  margin-top: 10px;
+  list-style: disc;
+}
+body #About .About_child .how2support ul li {
+  margin-top: 5px;
+  margin-left: 25px;
 }
 body #Apps .appsSwiper {
   margin-top: 10px !important;
@@ -849,16 +893,6 @@ body #FootLineAt .onlyNow .line1 {
   display: flex;
   align-items: center;
 }
-body #FootLineAt .onlyNow .line1::before {
-  display: inline-block;
-  content: "";
-  text-align: start;
-  background-image: url("../assets/present.webp");
-  background-size: 50px;
-  background-position: center;
-  height: 25px;
-  aspect-ratio: 1/1;
-}
 body #FootLineAt a {
   position: relative;
   display: flex;
@@ -871,6 +905,7 @@ body #FootLineAt a {
   font-size: 0.8rem;
   border-radius: 100px;
   color: white;
+  transform: scale(1.5);
 }
 body #FootLineAt a::before {
   display: inline-block;
