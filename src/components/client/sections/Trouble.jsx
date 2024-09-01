@@ -10,11 +10,10 @@ function Trouble() {
                 </div>
                 <div className="texts">
                     話すのが好き、歌うのが好き、趣味を活かしたい、そんなあなたの「好き」を応援します。
+                    <br />
                     新しい自分との出会いが、きっとここにあります。
                 </div>
-                <div className="exImg">
-                    ここに画像が入ります
-                </div>
+                <div className="exImg">ここに画像が入ります</div>
             </div>
         </section>
     );
