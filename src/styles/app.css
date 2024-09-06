@@ -693,13 +693,16 @@ body header .right ul li {
 body .sections {
   padding-bottom: 10px;
 }
+body .sections section {
+  max-width: 980px;
+  margin: 0 auto;
+}
 body .sections section .content {
   display: flex;
   justify-content: center;
   align-items: center;
   flex-flow: column;
   height: 100%;
-  max-width: 1000px;
   margin: 0 auto;
 }
 body .sections section .content .title {
@@ -710,6 +713,7 @@ body .sections section .content .subTitle {
 }
 body #KeyVisual {
   margin-top: 60px;
+  margin: 60px auto auto;
   background-image: url("/images/keyVisual2.png");
   background-size: cover;
   background-repeat: no-repeat;
@@ -757,6 +761,7 @@ body #About .About_child .title {
 body #About .About_child .texts {
   margin-top: 20px;
   font-size: 1rem;
+  text-align: center;
   letter-spacing: 0.04rem;
 }
 body #About .About_child .img {
@@ -1017,4 +1022,95 @@ body #FootLineAt .attension {
 }
 #moveTop.isBottom {
   bottom: 130px;
+}
+
+@media (min-width: 540px) and (max-width: 840px) {
+  body header {
+    background-color: #c7ffde;
+  }
+  body #KeyVisual {
+    height: 270px;
+  }
+}
+@media (min-width: 840px) {
+  body {
+    font-size: 20px;
+  }
+  body header {
+    background-color: rgb(199, 193, 255);
+    height: 70px;
+  }
+  body header .left img {
+    width: 85px;
+  }
+  body #KeyVisual {
+    height: 500px;
+  }
+  body #Trouble {
+    padding: 40px 10px 10px 10px;
+  }
+  body #Trouble .titles .title {
+    font-size: 1.7rem;
+  }
+  body #About .About_child .title {
+    font-size: 1.4rem;
+  }
+  body #About .About_child .texts {
+    font-size: 1.1rem;
+  }
+  body #Apps .appsSwiper .subTitle {
+    font-size: 1.7rem;
+    line-height: 1.8rem;
+    font-weight: 600;
+  }
+  body #Apps .appsSwiper .subTitle .chonPink {
+    font-size: 2.3rem !important;
+    margin-right: 3px;
+  }
+  body #Flow .inner .content .flowTitle {
+    font-size: 1.4rem;
+  }
+  body #Flow .inner .content ul li .details {
+    font-size: 1.1rem;
+  }
+  body footer .inner {
+    flex-flow: row;
+    justify-content: space-between;
+    font-size: 0.8rem;
+    padding: 0 30px;
+  }
+  body footer .inner ul {
+    display: flex;
+  }
+  body footer .inner ul li:not(:last-of-type) {
+    margin-right: 20px;
+  }
+  #moveTop {
+    bottom: 85px;
+    right: 10px;
+    z-index: 999;
+    transform: translate(0%, -50%) rotate(270deg);
+    font-weight: 700;
+    font-size: 1.3rem;
+    border: 1px solid black;
+    border-radius: 2000px;
+    padding: 8px;
+    background-color: white;
+    cursor: pointer;
+    transition: transform 0.2s ease, opacity 0.2s ease, visibility 0.2s ease, bottom 0.3s ease;
+    -webkit-user-select: none;
+       -moz-user-select: none;
+            user-select: none;
+  }
+  #moveTop:active {
+    background-color: #afafaf;
+    transform: translate(0%, -50%) rotate(270deg) scale(0.9);
+  }
+  #moveTop.hidden {
+    visibility: hidden;
+    opacity: 0;
+  }
+  #moveTop.isBottom {
+    bottom: 130px;
+  }
 }/*# sourceMappingURL=app.css.map */

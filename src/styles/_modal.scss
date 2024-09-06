@@ -1,3 +1,5 @@
+@use "./variables" as vrs;
+
 #Modal {
     position: fixed;
     top: 0;
@@ -48,4 +50,15 @@
             }
         }
     }
+}
+
+
+// BREAK POINT 1
+@media (min-width: vrs.$breakPoint1) and (max-width: vrs.$breakPoint2) {
+
+}
+
+// BREAK POINT 2
+@media (min-width: vrs.$breakPoint2) {
+
 }

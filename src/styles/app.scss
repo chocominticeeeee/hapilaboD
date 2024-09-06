@@ -24,7 +24,7 @@ body {
         display: flex;
         align-items: center;
         justify-content: space-between;
-        height: vrs.$headerHeight;
+        height: vrs.$headerHeight1;
         padding: 10px 10px;
         background-color: white;
 
@@ -53,11 +53,12 @@ body {
     .sections {
         padding-bottom: 10px;
         section {
+            max-width: 980px;
+            margin: 0 auto;
             .content {
                 @include mx.center();
                 flex-flow: column;
                 height: 100%;
-                max-width: 1000px;
                 margin: 0 auto;
                 // border: 2px solid rgba(46, 63, 216, 0.082);
                 .title {
@@ -70,7 +71,8 @@ body {
         }
     }
     #KeyVisual {
-        margin-top: vrs.$headerHeight;
+        margin-top: vrs.$headerHeight1;
+        margin: vrs.$headerHeight1 auto auto;
         background-image: url("/images/keyVisual2.png");
         background-size: cover;
         background-repeat: no-repeat;
@@ -95,7 +97,6 @@ body {
             margin-top: 20px;
             line-height: 1.5;
             text-align: center;
-            
         }
         .exImg {
             margin: 0 auto;
@@ -122,6 +123,7 @@ body {
             .texts {
                 margin-top: 20px;
                 font-size: 1rem;
+                text-align: center;
                 letter-spacing: 0.04rem;
             }
             .img {
@@ -149,7 +151,7 @@ body {
                     &:not(:first-of-type) {
                         margin-top: 25px;
                     }
-                    &:last-of-type{
+                    &:last-of-type {
                         margin-bottom: 25px;
                     }
                     &::before {
@@ -408,5 +410,125 @@ body {
     }
     &.isBottom {
         bottom: 130px;
+    }
+}
+
+// BREAK POINT 1
+@media (min-width: vrs.$breakPoint1) and (max-width: vrs.$breakPoint2) {
+    body {
+        header {
+            background-color: #c7ffde;
+        }
+        #KeyVisual {
+            height: 270px;
+        }
+    }
+}
+
+// BREAK POINT 2
+@media (min-width: vrs.$breakPoint2) {
+    body {
+        font-size: 20px;
+        header {
+            background-color: rgb(199, 193, 255);
+            height: vrs.$headerHeight2;
+            .left {
+                img {
+                    width: 85px;
+                }
+            }
+        }
+        #KeyVisual {
+            height: 500px;
+        }
+        #Trouble {
+            padding: 40px 10px 10px 10px;
+            .titles {
+                .title {
+                    font-size: 1.7rem;
+                }
+            }
+        }
+        #About {
+            .About_child {
+                .title {
+                    font-size: 1.4rem;
+                }
+                .texts {
+                    font-size: 1.1rem;
+                }
+            }
+        }
+        #Apps {
+            .appsSwiper {
+                .subTitle {
+                    font-size: 1.7rem;
+                    line-height: 1.8rem;
+                    font-weight: 600;
+                    .chonPink {
+                        font-size: 2.3rem !important;
+                        margin-right: 3px;
+                    }
+                }
+            }
+        }
+        #Flow {
+            .inner {
+                .content {
+                    .flowTitle {
+                        font-size: 1.4rem;
+                    }
+                    ul {
+                        li {
+                            .details {
+                                font-size: 1.1rem;
+                            }
+                        }
+                    }
+                }
+            }
+        }
+        footer{
+            .inner{
+                flex-flow: row;
+                justify-content: space-between;
+                font-size: 0.8rem;
+                padding: 0 30px;
+                ul {
+                    display: flex;
+                    li {
+                        &:not(:last-of-type) {
+                            margin-right: 20px;
+                        }
+                    }
+                }
+            }
+        }
+    }
+    #moveTop {
+        bottom: 85px;
+        right: 10px;
+        z-index: 999;
+        transform: translate(0%, -50%) rotate(270deg);
+        font-weight: 700;
+        font-size: 1.3rem;
+        border: 1px solid black;
+        border-radius: 2000px;
+        padding: 8px;
+        background-color: white;
+        cursor: pointer;
+        transition: transform 0.2s ease, opacity 0.2s ease, visibility 0.2s ease, bottom 0.3s ease;
+        user-select: none;
+        &:active {
+            background-color: #afafaf;
+            transform: translate(0%, -50%) rotate(270deg) scale(0.9);
+        }
+        &.hidden {
+            visibility: hidden;
+            opacity: 0;
+        }
+        &.isBottom {
+            bottom: 130px;
+        }
     }
 }

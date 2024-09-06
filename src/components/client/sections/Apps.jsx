@@ -3,11 +3,11 @@ import AppSwiper from "../AppSwiper";
 
 function Apps() {
     return (
-        <div id="Apps">
+        <section id="Apps">
             <div className="inner">
                 <AppSwiper />
             </div>
-        </div>
+        </section>
     );
 }
 
