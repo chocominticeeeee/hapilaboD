@@ -1,7 +1,15 @@
 "use client";
-import React, { useRef, useEffect } from "react";
+import React from "react";
+import Terms from "../server/Terms";
+import PrivacyPolicy from "../server/PrivacyPolicy";
+import Commerce from "../server/Commerce";
 
-function Footer() {
+function Footer(props) {
+    const { setModalContent } = props;
+    const clickHandler = (content) => {
+        document.getElementById("Modal").classList.add("show");
+        setModalContent(content);
+    };
     return (
         <footer>
             <div className="inner">
@@ -9,13 +17,31 @@ function Footer() {
                     <nav>
                         <ul>
                             <li>
-                                <a href="">特定商取引法に基づく表記</a>
+                                <a
+                                    onClick={() => {
+                                        clickHandler(<Commerce />);
+                                    }}
+                                >
+                                    特定商取引法に基づく表記
+                                </a>
                             </li>
                             <li>
-                                <a href="">プライバシーポリシー</a>
+                                <a
+                                    onClick={() => {
+                                        clickHandler(<PrivacyPolicy />);
+                                    }}
+                                >
+                                    プライバシーポリシー
+                                </a>
                             </li>
                             <li>
-                                <a href="">利用規約</a>
+                                <a
+                                    onClick={() => {
+                                        clickHandler(<Terms />);
+                                    }}
+                                >
+                                    利用規約
+                                </a>
                             </li>
                         </ul>
                     </nav>
