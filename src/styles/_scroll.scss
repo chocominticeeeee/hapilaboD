@@ -1,0 +1,19 @@
+@use "./variables" as vrs;
+::-webkit-scrollbar {
+    width: 8px;
+}
+
+::-webkit-scrollbar-track {
+    background-color: #f1f1f1;
+}
+
+::-webkit-scrollbar-thumb {
+    background-color: vrs.$color6;
+    border-radius: 10px !important;
+}
+
+
+* {
+    scrollbar-width: thin;
+    scrollbar-color: vrs.$color6 #f1f1f1;
+}

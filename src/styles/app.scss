@@ -1,5 +1,6 @@
 @use "./destyle";
 @use "./_utils";
+@use "./_scroll";
 @use "./_common";
 @use "./modal";
 @use "./variables" as vrs;
@@ -180,6 +181,68 @@ body {
                     li {
                         margin-top: 5px;
                         margin-left: 25px;
+                    }
+                }
+            }
+
+            &:first-of-type {
+                padding-bottom: 32px;
+                .title {
+                    .chon2 {
+                        position: relative;
+                        &::after {
+                            position: absolute;
+                            top: -25px;
+                            right: -25px;
+
+                            display: inline-block;
+                            content: "";
+                            background-image: url("../assets/chonPink.webp");
+                            background-size: 28px;
+                            background-repeat: no-repeat;
+                            transform: rotateY(180deg) rotateZ(-15deg);
+                            background-position: center;
+                            width: 40px !important;
+                            height: 40px !important;
+                        }
+                        &::before {
+                            position: absolute;
+                            top: -25px;
+                            left: -30px;
+                            display: inline-block;
+                            content: "";
+                            background-image: url("../assets/chonPink.webp");
+                            background-size: 28px;
+                            background-repeat: no-repeat;
+                            transform: rotateZ(-20deg);
+                            background-position: center;
+                            width: 40px !important;
+                            height: 40px !important;
+                        }
+                    }
+                    .present {
+                        display: flex;
+                        flex-flow: row;
+                        align-items: center;
+                        justify-content: center;
+                        &::after {
+                            display: inline-block;
+                            content: "";
+                            background-image: url("../assets/present.webp");
+                            background-size: 50px;
+                            background-position: center;
+                            width: 25px !important;
+                            height: 25px !important;
+                        }
+                    }
+                }
+                .texts {
+                    font-size: 1rem !important;
+                    .fs-ajust1 {
+                        font-size: 0.95rem;
+                    }
+                    .fs-ajust2 {
+                        font-size: 0.8rem !important;
                     }
                 }
             }
@@ -417,7 +480,7 @@ body {
 @media (min-width: vrs.$breakPoint1) and (max-width: vrs.$breakPoint2) {
     body {
         header {
-            background-color: #c7ffde;
+            // background-color: #c7ffde;
         }
         #KeyVisual {
             height: 270px;
@@ -430,7 +493,7 @@ body {
     body {
         font-size: 20px;
         header {
-            background-color: rgb(199, 193, 255);
+            // background-color: rgb(199, 193, 255);
             height: vrs.$headerHeight2;
             .left {
                 img {
@@ -488,8 +551,8 @@ body {
                 }
             }
         }
-        footer{
-            .inner{
+        footer {
+            .inner {
                 flex-flow: row;
                 justify-content: space-between;
                 font-size: 0.8rem;

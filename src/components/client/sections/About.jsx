@@ -10,6 +10,25 @@ function About() {
     return (
         <section id="About">
             <div className="inner">
+                <div className="About_child">
+                    <p className="title">
+                        <span className="chon2">今だけ限定！</span>
+                        <br />
+                        Amazonギフト券
+                        <br />
+                        <span className="present">プレゼントキャンペーン開催中！</span>
+                    </p>
+                    <div className="texts">
+                        応募➡審査通過➡配信開始で
+                        <br />
+                        <p className="fs-ajust1">3000円分のAmazonギフト券をプレゼント！</p>
+                        <p className="fs-ajust2">
+                            <br />
+                            ※弊社指定のライバー事務所登録後、指定配信アプリにて1時間以上配信された方が対象となります。<br />
+                            ※配信確認後1ヶ月後以降にお送りします。
+                        </p>
+                    </div>
+                </div>
                 <About_child title="「はぴラボ」とは？" img={IMG_STAR.src}>
                     家事や育児で忙しいあなたも
                     <br />
