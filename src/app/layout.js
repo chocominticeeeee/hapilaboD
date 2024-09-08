@@ -10,7 +10,7 @@ export const metadata = {
 	openGraph: {
 		type: 'website',
 		url: 'https://master--hapilabo-d.netlify.app/',
-		title: 'My Awesome Page',
+		title: 'ライバー事務所「ハピラボ」',
 		description: 'ライバー事務所「ハピラボ」',
 		images: [
 			{
