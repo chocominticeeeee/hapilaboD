@@ -46,7 +46,7 @@ function Footer(props) {
                         </ul>
                     </nav>
                 </div>
-                <span className="copyLight">© Copyright はぴラボ All rights reserved.</span>
+                <span className="copyLight">© Copyright ハピラボ All rights reserved.</span>
             </div>
         </footer>
     );

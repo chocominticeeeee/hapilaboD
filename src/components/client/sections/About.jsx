@@ -29,7 +29,7 @@ function About() {
                         </p>
                     </div>
                 </div>
-                <About_child title="「はぴラボ」とは？" img={IMG_STAR.src}>
+                <About_child title="「ハピラボ」とは？" img={IMG_STAR.src}>
                     家事や育児で忙しいあなたも
                     <br />
                     自分のペースで楽しく活動できる

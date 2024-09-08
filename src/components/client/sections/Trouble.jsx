@@ -7,7 +7,7 @@ function Trouble() {
             <div className="inner">
                 <div className="titles">
                     <p className="title">
-                        「はぴラボ」で叶える
+                        「ハピラボ」で叶える
                         <br />
                         あなたの理想のライフスタイル
                     </p>
